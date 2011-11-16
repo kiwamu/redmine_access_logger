@@ -1,8 +1,7 @@
-B1;2c= redmine_access_logger
+= redmine_access_logger
 
-Redmine で操作ログを出力するためのプラグインです。
-Apache の access.log や Rails の production.log ではユーザー名が含まれていないので
-プラグイン形式で独自ロガーを用意しました。
+* Redmine で操作ログを出力するためのプラグインです。
+* Apache の access.log や Rails の production.log ではユーザー名が含まれていないので、プラグイン形式で独自ロガーを用意しました。
 
 == 使い方
 
