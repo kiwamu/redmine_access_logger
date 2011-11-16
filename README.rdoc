@@ -1,4 +1,4 @@
-= redmine_access_logger
+B1;2c= redmine_access_logger
 
 Redmine で操作ログを出力するためのプラグインです。
 Apache の access.log や Rails の production.log ではユーザー名が含まれていないので
@@ -8,5 +8,15 @@ Apache の access.log や Rails の production.log ではユーザー名が含�
 
 * REDMINE_ROOT/vendor/plugins 以下に配置するだけです。
 * production モードのみで動きます。
+* 操作ログは、REDMINE_ROOT/log/access.log に出力されます。
 
+== ログの出力例
 
+ I, [2011-11-17T01:04:54.315281 #10902]  INFO -- : admin {"action":"logout","controller":"account","user":"admin"}
+ I, [2011-11-17T01:04:54.378765 #10902]  INFO -- : - {"action":"index","controller":"welcome","user":""}
+ I, [2011-11-17T01:04:59.661088 #10902]  INFO -- : - {"action":"login","controller":"account","user":""}
+ I, [2011-11-17T01:05:30.168098 #10902]  INFO -- : admin {"action":"index","controller":"welcome","user":"admin"}
+ I, [2011-11-17T01:05:33.770548 #10902]  INFO -- : admin {"action":"show","id":"devs","controller":"projects","user":"admin"}
+ I, [2011-11-17T01:05:37.709849 #10902]  INFO -- : admin {"project_id":"devs","action":"index","controller":"issues","user":"admin"}
+ I, [2011-11-17T01:05:41.035208 #10902]  INFO -- : admin {"action":"show","id":"819","controller":"issues","user":"admin"}
+ ...
